@@ -89,7 +89,7 @@
       while($producten = mysqli_fetch_assoc($result)) { ?>
      <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading"> <?php echo ($producten['naam']); ?> <?php error_reporting(E_ERROR | E_PARSE); if($_SESSION['admin'] == true){ ?> <a href="edit.php?edit=<?php echo ($producten['id']); ?>"><img  src="img/edit.png" style="width: 20px;"></a><img href="edit.php?edit=<?php echo $producten['id']; ?>" src="img/prul.png" style="width: 20px;"><?php }?> </div>
+          <div class="panel-heading"> <?php echo ($producten['naam']); ?> <?php error_reporting(E_ERROR | E_PARSE); if($_SESSION['admin'] == true){ ?> <a href="edit.php?edit=<?php echo ($producten['id']); ?>"><img  src="img/edit.png" style="width: 20px;"></a><a href="delete.php?delete=<?php echo $producten['id']; ?>"><img src="img/prul.png" style="width: 20px;"></a><?php }?> </div>
         <div class="panel-body"><img src="img/<?php echo ($producten['img']); ?>" style="width: 100%;"></div>
         <div class="panel-footer"> <?php echo ($producten['beschrijving']); ?></div>
       </div>
